@@ -1,44 +1,24 @@
-/*  Fondo de la barra lateral */
-.bd-sidebar {
-    width: 250px !important;
-    position: fixed !important;
-    left: 0 !important;
-    top: 0;
-    height: 100vh !important;
-    background-color: #6572AB !important; /* Azul */
-    border-right: 1px solid #444444 !important; /* Borde alrededor de la barra lateral */
-    overflow-y: auto; /* Permite scroll si es necesario */
-    scrollbar-width: none; /* Oculta scrollbar en Firefox */
+/* 📌 Fondo de la barra lateral - ELIMINADO para mantener los colores de sphinx_rtd_theme */
+
+/* Ajustar tamaño del logo en la barra lateral */
+.bd-sidebar img {
+    max-width: 110px !important;  /* Ajusta el tamaño máximo del logo */
+    height: auto !important;  /* Mantiene la proporción */
+    display: block;
+    margin: 0 auto;
 }
 
-/* Ocultar scroll en navegadores WebKit */
+/* 📌 Ocultar scroll en navegadores WebKit */
 .bd-sidebar::-webkit-scrollbar {
     display: none;
 }
 
-/*  Ajuste del contenido principal para que no se solape */
+/* 📌 Ajuste del contenido principal para que no se solape */
 .bd-content {
     margin-left: calc(250px + 20px) !important; /* Ajuste dinámico */
 }
 
-/*  Fondo del encabezado en la barra lateral */
-.bd-sidebar-primary {
-    background-color: #d5e2e9 !important;
-}
-
-/*  Texto del menú en la barra lateral */
-.bd-sidebar .nav-link {
-    color: #000000 !important;
-}
-
-/*  Texto de las secciones cuando están activas o al pasar el mouse */
-.bd-sidebar .nav-link.active, 
-.bd-sidebar .nav-link:hover {
-    color: #6572AB !important; /* Azul claro */
-}
-
-
-/*  Estilo del cuadro de búsqueda */
+/* 📌 Estilo del cuadro de búsqueda - MANTENIDO */
 .bd-sidebar .form-control {
     background-color: #FFFFFF !important;
     color: #000000 !important;
