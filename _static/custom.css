@@ -1,4 +1,4 @@
-/* 📌 Fondo de la barra lateral */
+/*  Fondo de la barra lateral */
 .bd-sidebar {
     width: 250px !important;
     position: fixed !important;
@@ -16,42 +16,29 @@
     display: none;
 }
 
-/* 📌 Ajuste del contenido principal para que no se solape */
+/*  Ajuste del contenido principal para que no se solape */
 .bd-content {
     margin-left: calc(250px + 20px) !important; /* Ajuste dinámico */
 }
 
-/* 📌 Fondo del encabezado en la barra lateral */
+/*  Fondo del encabezado en la barra lateral */
 .bd-sidebar-primary {
     background-color: #d5e2e9 !important;
 }
 
-/* 📌 Texto del menú en la barra lateral */
+/*  Texto del menú en la barra lateral */
 .bd-sidebar .nav-link {
     color: #000000 !important;
 }
 
-/* 📌 Texto de las secciones cuando están activas o al pasar el mouse */
+/*  Texto de las secciones cuando están activas o al pasar el mouse */
 .bd-sidebar .nav-link.active, 
 .bd-sidebar .nav-link:hover {
     color: #9296d6 !important; /* Azul claro */
 }
 
-/* 📌 Estilo para el segundo logo debajo del logo principal */
-.extra-logo {
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-}
 
-.extra-logo img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-}
-
-/* 📌 Estilo del cuadro de búsqueda */
+/*  Estilo del cuadro de búsqueda */
 .bd-sidebar .form-control {
     background-color: #FFFFFF !important;
     color: #000000 !important;
