@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLS Regression &mdash; Seasonal Forecasting Book</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=92206b8b" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/scripts/sphinx-book-theme.js"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Forecast" href="../eof_analysis/3_forecast/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../seasonal.html" class="icon icon-home">
+            Project name not set
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../eof_analysis/index.html">EOF ANALYSIS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PLS REGRESSION</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../seasonal.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../seasonal.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">PLS Regression</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/notebooks/PLS_Regression.ipynb" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="pls-regression">
+<h1>PLS Regression<a class="headerlink" href="#pls-regression" title="Link to this heading"></a></h1>
+<p>🚧 <strong>Page under construction!</strong> 🚧</p>
+<section id="index">
+<h2>Index<a class="headerlink" href="#index" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id-datos"><span class="std std-ref">1. Datos</span></a></p></li>
+<li><p><a class="reference internal" href="#id-pesos-espaciales"><span class="std std-ref">2. Pesos Espaciales</span></a></p></li>
+<li><p><a class="reference internal" href="#id-normalizacion"><span class="std std-ref">3. Normalización</span></a></p></li>
+<li><p><a class="reference internal" href="#id-detrending"><span class="std std-ref">4. Detrending</span></a></p></li>
+<li><p><a class="reference internal" href="#id-pls-regression"><span class="std std-ref">5. PLS Regression en Fortran</span></a></p></li>
+<li><p><a class="reference internal" href="#id-pls-scikit-learn"><span class="std std-ref">6. PLS con Scikit-Learn</span></a></p></li>
+<li><p><a class="reference internal" href="#id-escritura-resultados"><span class="std std-ref">7. Escritura de Resultados</span></a></p></li>
+</ul>
+</section>
+<section id="datos">
+<span id="id-datos"></span><h2>1. Datos<a class="headerlink" href="#datos" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>PSL</strong> - Presión a nivel del mar (predictor).</p></li>
+<li><p><strong>TAS</strong> - Temperatura a 2 metros (target).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! FORTRAN
+anz_time=84		!ERA5 from 1940 to 2023
+l1=11			!start time period for PLS \textbf{\textit{1950}}
+l2=80			!end time period for PLS \textbf{\textit{2020}}
+!my grid is 384x192, surely it’s the same as Copernicus
+MaskTAS=read mask for target 
+MaskPSL=[90°W:60°E,20°N:85°N]
+</pre></div>
+</div>
+<p><span style="color:blue">PAPER: MSLP patterns are calculated over the Euro-Atlantic sector [−90, 60]E × [20, 80]N</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! FORTRAN
+PSL=read seasonal mean pressure data	
+!I actually coarsen the grid further for PSL, averaging 2x2 grid cell
+
+TAS=read seasonal mean target data	!but not for the target
+</pre></div>
+</div>
+</section>
+<section id="pesos-espaciales">
+<span id="id-pesos-espaciales"></span><h2>2. Pesos Espaciales<a class="headerlink" href="#pesos-espaciales" title="Link to this heading"></a></h2>
+<p>Pesos espaciales para corregir la diferencia de área entre latitudes.</p>
+<p>Se usa luego en la normalización y en la matriz de covarianza.</p>
+<div class="math notranslate nohighlight">
+\[ w(\phi) = \sqrt{\frac{\pi}{180} \cdot \phi} \]</div>
+<div class="math notranslate nohighlight">
+\[ \phi  - latitud \]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! FORTRAN
+w(lat) = sqrt(3.14159265 * lat / 180.)
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">w2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">TAS</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]))</span>
+<span class="n">w2_broadcasted</span><span class="p">,</span> <span class="n">TAS_weighted</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">w2</span><span class="p">,</span> <span class="n">TAS</span><span class="p">[</span><span class="s1">&#39;AnomT2M&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="normalizacion">
+<span id="id-normalizacion"></span><h2>3. Normalización<a class="headerlink" href="#normalizacion" title="Link to this heading"></a></h2>
+<p>Normalización dividiendo por su varianza espacial</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8775733a-e2ee-4706-8e02-29b329d5e873">
+<span class="eqno">(1)<a class="headerlink" href="#equation-8775733a-e2ee-4706-8e02-29b329d5e873" title="Permalink to this equation"></a></span>\[\begin{equation}
+    \sigma^2_{\textbf{TAS}} = \frac{\sum_{i,j,t} \textbf{TAS}(i,j,t)^2}{\sum \text{Mask}_{\textbf{TAS}} \cdot (l_2 - l_1 + 1)}
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b456e240-9afb-440a-b581-a79d01fafd78">
+<span class="eqno">(2)<a class="headerlink" href="#equation-b456e240-9afb-440a-b581-a79d01fafd78" title="Permalink to this equation"></a></span>\[\begin{equation}
+    \textbf{TAS}(i,j,t) = \frac{\textbf{TAS}(i,j,t)}{\sqrt{\sigma^2_{\textbf{TAS}}}}
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0d9209de-e4ec-473c-a969-bc7b597a566d">
+<span class="eqno">(3)<a class="headerlink" href="#equation-0d9209de-e4ec-473c-a969-bc7b597a566d" title="Permalink to this equation"></a></span>\[\begin{equation}
+    \sigma^2_{\textbf{PSL}} = \frac{\sum_{i,j,t} \textbf{PSL}(i,j,t)^2}{\sum \text{Mask}_{\textbf{PSL}} \cdot (l_2 - l_1 + 1)}
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f304bb5a-a23c-4050-8c1a-b231cdca1d33">
+<span class="eqno">(4)<a class="headerlink" href="#equation-f304bb5a-a23c-4050-8c1a-b231cdca1d33" title="Permalink to this equation"></a></span>\[\begin{equation}
+    \textbf{PSL}(i,j,t) = \frac{\textbf{PSL}(i,j,t)}{\sqrt{\sigma^2_{\textbf{PSL}}}}
+\end{equation}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! FORTRAN
+varTAS = sum(TAS(:,:,l1:l2)**2.) / (sum(MaskTAS) * real(l2-l1+1))
+TAS(:,:,:) = TAS(:,:,:) / sqrt(varTAS)
+varPSL = sum(PSL(:,:,l1:l2)**2.) / (sum(MaskPSL) * real(l2-l1+1))
+PSL(:,:,:) = PSL(:,:,:) / sqrt(varPSL)
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python</span>
+
+<span class="c1"># Media y desviación estándar (para estandarizar)</span>
+<span class="n">PSL_mean</span><span class="p">,</span> <span class="n">PSL_std</span> <span class="o">=</span> <span class="n">PSL</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="n">PSL</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
+<span class="n">TAS_mean</span><span class="p">,</span> <span class="n">TAS_std</span> <span class="o">=</span> <span class="n">TAS</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="n">TAS</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
+
+<span class="c1"># Evitar división por cero</span>
+<span class="n">PSL_std</span> <span class="o">=</span> <span class="n">PSL_std</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">PSL_std</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">TAS_std</span> <span class="o">=</span> <span class="n">TAS_std</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">TAS_std</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Estandarizar</span>
+<span class="n">PSL</span> <span class="o">=</span> <span class="p">(</span><span class="n">PSL</span> <span class="o">-</span> <span class="n">PSL_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">PSL_std</span>
+<span class="n">TAS</span> <span class="o">=</span> <span class="p">(</span><span class="n">TAS</span> <span class="o">-</span> <span class="n">TAS_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">TAS_std</span>
+</pre></div>
+</div>
+</section>
+<section id="detrending">
+<span id="id-detrending"></span><h2>4. Detrending<a class="headerlink" href="#detrending" title="Link to this heading"></a></h2>
+<div style="
+    background-color: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 12px; 
+    border: 1px solid #ccc; 
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.1); 
+    text-align: justify; 
+    color: #333; 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: auto;
+">
+    <h3 style="text-align: center; color: #2c3e50;">📌 Detrending en Análisis de Datos</h3>
+    <p>
+        El <strong>detrending</strong> es un proceso en el análisis de datos en el que se elimina una tendencia de una serie temporal. 
+        Se usa en meteorología para analizar anomalías sin que la tendencia global afecte a los resultados.
+    </p>
+    <p>
+        Matemáticamente, implica ajustar y restar una función f(t)  de la serie de datos x(t):
+    </p>
+    <pre style="background-color: #e8e8e8; padding: 10px; border-radius: 6px; font-family: monospace;">
+X_dtrended = x(t) - f(t)
+f(t) = at² + bt + c  (detrending cuadrático)
+    </pre>
+    <p>
+        El propósito de esta operación es garantizar que las variaciones en los datos sean relativas a la 
+        variabilidad climática en lugar de tendencias a largo plazo.
+    </p>
+</div>
+<p>Se hace detrending para TAS:</p>
+<ol class="arabic simple">
+<li><p>Tomar la media ponderada espacialmente sobre Alemania.</p></li>
+<li><p>Ajustar una función cuadrática a la serie temporal.</p></li>
+<li><p>Sustraer esta tendencia de todos los puntos.</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight" id="equation-8d80502c-8caf-4d7c-bcb9-0f1162d5b679">
+<span class="eqno">(5)<a class="headerlink" href="#equation-8d80502c-8caf-4d7c-bcb9-0f1162d5b679" title="Permalink to this equation"></a></span>\[\begin{equation}
+    \textbf{TAS}_\text{detrended}(i,j,t) = \textbf{TAS}(i,j,t) - \hat{f}(t)
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\hat{f}(t)\)</span> es la tendencia cuadrática ajustada.</p>
+<p>Después, se centra la serie restando la media:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-63872aac-69ae-4a02-9435-cb0174064ebf">
+<span class="eqno">(6)<a class="headerlink" href="#equation-63872aac-69ae-4a02-9435-cb0174064ebf" title="Permalink to this equation"></a></span>\[\begin{equation}
+    \textbf{TAS}(i,j,t) = \textbf{TAS}(i,j,t) - \overline{\textbf{TAS}}
+\end{equation}\]</div>
+<p>Para PSL, simplemente se resta su media: <span class="math notranslate nohighlight">\(\textbf{PSL}(i,j,t) = \textbf{PSL}(i,j,t) - \overline{\textbf{PSL}} \)</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! FORTRAN
+TAS = detrend(TAS)
+TAS = TAS - mean(TAS)
+PSL = PSL - mean(PSL)
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Python</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">TAS</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span>
+<span class="n">poly_coeffs</span> <span class="o">=</span> <span class="n">Polynomial</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">times</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">tas_mean_region</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span><span class="o">.</span><span class="n">coef</span>
+<span class="n">trend</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">poly_coeffs</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">times</span><span class="p">),</span><span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="n">times</span><span class="p">})</span>
+<span class="n">TAS</span> <span class="o">=</span> <span class="n">TAS</span> <span class="o">-</span> <span class="n">trend</span>
+</pre></div>
+</div>
+<figure class="align-default" id="fig-detrending">
+<a class="reference internal image-reference" href="../_images/detrending_temperature_anomalies.png"><img alt="../_images/detrending_temperature_anomalies.png" src="../_images/detrending_temperature_anomalies.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Anomalías de temperatura después de eliminar la tendencia.</span><a class="headerlink" href="#fig-detrending" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pls-regression-en-fortran">
+<span id="id-pls-regression"></span><h2>5. PLS Regression en Fortran<a class="headerlink" href="#pls-regression-en-fortran" title="Link to this heading"></a></h2>
+<p>Se implementa la regresión de mínimos cuadrados parciales (PLS).</p>
+<p>Se definen matrices</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! FORTRAN</span>
+<span class="k">allocate</span><span class="p">(</span><span class="n">U</span><span class="p">(</span><span class="n">anz_time</span><span class="p">,</span><span class="n">c2</span><span class="p">),</span><span class="n">Y</span><span class="p">(</span><span class="n">anz_time</span><span class="p">,</span><span class="n">c1</span><span class="p">))</span><span class="w">		</span>
+<span class="c">! make area w-weighted PSL and TAS fields into vectors, put them into U and Y</span>
+</pre></div>
+</div>
+<section id="matriz-de-covarianza">
+<h3>5.1 Matriz de Covarianza<a class="headerlink" href="#matriz-de-covarianza" title="Link to this heading"></a></h3>
+<p>Se define la matriz de covarianza entre predictores  <span class="math notranslate nohighlight">\(\mathbf{U}\)</span> y <span class="math notranslate nohighlight">\(\mathbf{Y}\)</span> .</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e77ec8c9-0858-4d26-aacd-97e95be1248c">
+<span class="eqno">(7)<a class="headerlink" href="#equation-e77ec8c9-0858-4d26-aacd-97e95be1248c" title="Permalink to this equation"></a></span>\[\begin{equation}
+    \mathbf{COV} = \frac{1}{anz\_time} \mathbf{U}^T \mathbf{Y}
+\end{equation}\]</div>
+</section>
+</section>
+<section id="pls-con-scikit-learn">
+<span id="id-pls-scikit-learn"></span><h2>6. PLS con Scikit-Learn<a class="headerlink" href="#pls-con-scikit-learn" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.cross_decomposition</span><span class="w"> </span><span class="kn">import</span> <span class="n">PLSRegression</span>
+<span class="n">fac</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">pls</span> <span class="o">=</span> <span class="n">PLSRegression</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">fac</span><span class="p">)</span>
+<span class="n">pls</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">,</span> <span class="n">Y_scaled</span><span class="p">)</span>
+<span class="n">x_weights</span> <span class="o">=</span> <span class="n">pls</span><span class="o">.</span><span class="n">x_weights_</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># (fac, 9966)</span>
+<span class="n">y_weights</span> <span class="o">=</span> <span class="n">pls</span><span class="o">.</span><span class="n">y_weights_</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># (fac, 176)</span>
+</pre></div>
+</div>
+</section>
+<section id="escritura-de-resultados">
+<span id="id-escritura-resultados"></span><h2>7. Escritura de Resultados<a class="headerlink" href="#escritura-de-resultados" title="Link to this heading"></a></h2>
+<p>Se guardan los resultados en formato NetCDF para análisis posterior.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+    <span class="n">r2</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;component&#39;</span><span class="p">,</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">],</span>
+    <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;longitude&#39;</span><span class="p">:</span> <span class="n">PSL</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">],</span> <span class="s1">&#39;latitude&#39;</span><span class="p">:</span> <span class="n">PSL</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">],</span> <span class="s1">&#39;component&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">fac</span><span class="o">+</span><span class="mi">1</span><span class="p">)},</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;PSLweights&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">output_psl</span><span class="p">)</span>
+
+<span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+    <span class="n">q2</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;component&#39;</span><span class="p">,</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">],</span>
+    <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;longitude&#39;</span><span class="p">:</span> <span class="n">TAS</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">],</span> <span class="s1">&#39;latitude&#39;</span><span class="p">:</span> <span class="n">TAS</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">],</span> <span class="s1">&#39;component&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">fac</span><span class="o">+</span><span class="mi">1</span><span class="p">)},</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;TASweights&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">output_tas</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../eof_analysis/3_forecast/index.html" class="btn btn-neutral float-left" title="Forecast" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
