@@ -1,6 +1,6 @@
 title: "Seasonal Forecasting Book"
 author: "Sabela Sanfiz"
-logo: _static/logo.png  # logo AEMET
+logo: _static/logo.jpg  # logo AEMET
 
 # Ejecución de notebooks 
 execute:
@@ -23,15 +23,15 @@ sphinx:
     html_theme: sphinx_rtd_theme
     html_theme_options:
       sticky_navigation: True  # Mantener la navegación visible al hacer scroll
+      navigation_with_keys: true  # Permite moverse con flechas en el libro
 
     myst_enable_extensions:
-      - amsmath      # Ecuaciones matemáticas
-      - dollarmath   # Permite ecuaciones con $...$
-      - colon_fence  # Bloques de contenido con `:::`
-      - deflist      # Listas de definiciones
-      - html_image   # Soporte para imágenes en HTML
-    html_theme_options:
-      navigation_with_keys: true  # Permite moverse con flechas en el libro
+      - amsmath      
+      - dollarmath   
+      - colon_fence  
+      - deflist      
+      - html_image   
+
 
 
 repository:
