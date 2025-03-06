@@ -2,7 +2,7 @@
 
 /* Ajustar tamaño del logo en la barra lateral */
 .bd-sidebar img {
-    max-width: 110px !important;  /* Ajusta el tamaño máximo del logo */
+    max-width: 90px !important;  /* Ajusta el tamaño máximo del logo */
     height: auto !important;  /* Mantiene la proporción */
     display: block;
     margin: 0 auto;
@@ -25,6 +25,3 @@
     border: 1px solid #CCCCCC !important;
 }
 
-.wy-nav-side {
-    background-color: #b7b8b9 !important;  /* Cambia esto al color que prefieras */
-}
