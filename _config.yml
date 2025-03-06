@@ -1,6 +1,6 @@
 title: "Seasonal Forecasting Book"
 author: "Sabela Sanfiz"
-logo: _static/logo.jpg  # logo AEMET
+logo: _static/logo.PNG  # logo AEMET
 
 # Ejecución de notebooks 
 execute:
