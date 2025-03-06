@@ -1,0 +1,49 @@
+title: "Seasonal Forecasting Book"
+author: "Sabela Sanfiz"
+logo: _static/logo.png  # logo AEMET
+
+# Ejecución de notebooks 
+execute:
+  execute_notebooks: "cache"  
+
+# Configuración de la interfaz del libro
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: false
+  extra_static_paths:
+    - _static  # Se asegura de que _static/ se use correctamente
+  extra_css:
+    - _static/custom.css
+  extra_navbar: _static/sidebar.html
+
+# Habilitar extensiones para Markdown avanzado
+sphinx:
+  config:
+    html_theme: sphinx_rtd_theme
+    html_theme_options:
+      sticky_navigation: True  # Mantener la navegación visible al hacer scroll
+
+    myst_enable_extensions:
+      - amsmath      # Ecuaciones matemáticas
+      - dollarmath   # Permite ecuaciones con $...$
+      - colon_fence  # Bloques de contenido con `:::`
+      - deflist      # Listas de definiciones
+      - html_image   # Soporte para imágenes en HTML
+    html_theme_options:
+      navigation_with_keys: true  # Permite moverse con flechas en el libro
+
+
+repository:
+  url: https://github.com/Sanfiz/seasonal_book  
+  path_to_book: docs 
+  branch: master 
+
+# Configuración de LaTeX
+latex:
+  latex_elements:
+    preamble: |
+      \usepackage{amsmath}  
+      \usepackage{bm}       
+      \usepackage{tcolorbox} 
+

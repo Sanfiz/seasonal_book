@@ -1,0 +1,6 @@
+jupyter-book
+numpy
+xarray
+matplotlib
+scipy
+scikit-learn

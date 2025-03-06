@@ -1,0 +1,16 @@
+format: jb-book
+root: seasonal
+
+chapters:
+  - file: eof_analysis/index
+    title: "EOF ANALYSIS"
+    sections:
+      - file: eof_analysis/1_seasonal_verification/index
+        title: "1. Seasonal Verification"
+      - file: eof_analysis/2_ensemble_weighting/index
+        title: "2. Ensemble Weighting"
+      - file: eof_analysis/3_forecast/index
+        title: "3. Forecast"
+
+  - file: notebooks/PLS_Regression
+    title: "PLS REGRESSION"
