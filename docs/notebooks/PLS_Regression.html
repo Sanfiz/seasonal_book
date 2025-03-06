@@ -153,20 +153,20 @@ w(lat) = sqrt(3.14159265 * lat / 180.)
 <section id="normalizacion">
 <span id="id-normalizacion"></span><h2>3. Normalización<a class="headerlink" href="#normalizacion" title="Link to this heading"></a></h2>
 <p>Normalización dividiendo por su varianza espacial</p>
-<div class="amsmath math notranslate nohighlight" id="equation-38328c02-a65c-4cee-8366-58d42b38dd78">
-<span class="eqno">(1)<a class="headerlink" href="#equation-38328c02-a65c-4cee-8366-58d42b38dd78" title="Permalink to this equation"></a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e8cb2ac6-e5e8-46bd-942b-15621a137c10">
+<span class="eqno">(1)<a class="headerlink" href="#equation-e8cb2ac6-e5e8-46bd-942b-15621a137c10" title="Permalink to this equation"></a></span>\[\begin{equation}
     \sigma^2_{\textbf{TAS}} = \frac{\sum_{i,j,t} \textbf{TAS}(i,j,t)^2}{\sum \text{Mask}_{\textbf{TAS}} \cdot (l_2 - l_1 + 1)}
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-9144957f-47e6-4230-91de-f389dff1357d">
-<span class="eqno">(2)<a class="headerlink" href="#equation-9144957f-47e6-4230-91de-f389dff1357d" title="Permalink to this equation"></a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-11f8eb28-78ae-47fa-8ca0-15facc6dddb4">
+<span class="eqno">(2)<a class="headerlink" href="#equation-11f8eb28-78ae-47fa-8ca0-15facc6dddb4" title="Permalink to this equation"></a></span>\[\begin{equation}
     \textbf{TAS}(i,j,t) = \frac{\textbf{TAS}(i,j,t)}{\sqrt{\sigma^2_{\textbf{TAS}}}}
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-71bda3f9-9c53-4834-ae99-7bc1eee04b91">
-<span class="eqno">(3)<a class="headerlink" href="#equation-71bda3f9-9c53-4834-ae99-7bc1eee04b91" title="Permalink to this equation"></a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2fc7f097-828c-44de-b35d-cfc8dd24722c">
+<span class="eqno">(3)<a class="headerlink" href="#equation-2fc7f097-828c-44de-b35d-cfc8dd24722c" title="Permalink to this equation"></a></span>\[\begin{equation}
     \sigma^2_{\textbf{PSL}} = \frac{\sum_{i,j,t} \textbf{PSL}(i,j,t)^2}{\sum \text{Mask}_{\textbf{PSL}} \cdot (l_2 - l_1 + 1)}
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-0b9ed668-f46a-499f-840a-5e6f9b2ac3a8">
-<span class="eqno">(4)<a class="headerlink" href="#equation-0b9ed668-f46a-499f-840a-5e6f9b2ac3a8" title="Permalink to this equation"></a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-edfde838-8db0-4856-bfdb-97cd8dc66266">
+<span class="eqno">(4)<a class="headerlink" href="#equation-edfde838-8db0-4856-bfdb-97cd8dc66266" title="Permalink to this equation"></a></span>\[\begin{equation}
     \textbf{PSL}(i,j,t) = \frac{\textbf{PSL}(i,j,t)}{\sqrt{\sigma^2_{\textbf{PSL}}}}
 \end{equation}\]</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! FORTRAN
@@ -230,14 +230,14 @@ f(t) = at² + bt + c  (detrending cuadrático)
 <li><p>Ajustar una función cuadrática a la serie temporal.</p></li>
 <li><p>Sustraer esta tendencia de todos los puntos.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-c1511986-51a3-4c03-9220-7bf5a24b7455">
-<span class="eqno">(5)<a class="headerlink" href="#equation-c1511986-51a3-4c03-9220-7bf5a24b7455" title="Permalink to this equation"></a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-52853d62-44df-4c6b-80cb-93154b829500">
+<span class="eqno">(5)<a class="headerlink" href="#equation-52853d62-44df-4c6b-80cb-93154b829500" title="Permalink to this equation"></a></span>\[\begin{equation}
     \textbf{TAS}_\text{detrended}(i,j,t) = \textbf{TAS}(i,j,t) - \hat{f}(t)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\hat{f}(t)\)</span> es la tendencia cuadrática ajustada.</p>
 <p>Después, se centra la serie restando la media:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c53a956c-7bb0-4ba5-a96b-e5a63c66afa0">
-<span class="eqno">(6)<a class="headerlink" href="#equation-c53a956c-7bb0-4ba5-a96b-e5a63c66afa0" title="Permalink to this equation"></a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3aba42bf-7047-4d90-bf59-8da8c4c54348">
+<span class="eqno">(6)<a class="headerlink" href="#equation-3aba42bf-7047-4d90-bf59-8da8c4c54348" title="Permalink to this equation"></a></span>\[\begin{equation}
     \textbf{TAS}(i,j,t) = \textbf{TAS}(i,j,t) - \overline{\textbf{TAS}}
 \end{equation}\]</div>
 <p>Para PSL, simplemente se resta su media: <span class="math notranslate nohighlight">\(\textbf{PSL}(i,j,t) = \textbf{PSL}(i,j,t) - \overline{\textbf{PSL}} \)</span></p>
@@ -274,8 +274,8 @@ PSL = PSL - mean(PSL)
 <section id="matriz-de-covarianza">
 <h3>5.1 Matriz de Covarianza<a class="headerlink" href="#matriz-de-covarianza" title="Link to this heading"></a></h3>
 <p>Se define la matriz de covarianza entre predictores  <span class="math notranslate nohighlight">\(\mathbf{U}\)</span> y <span class="math notranslate nohighlight">\(\mathbf{Y}\)</span> .</p>
-<div class="amsmath math notranslate nohighlight" id="equation-57e5ea4f-af22-49f1-a674-3b6ee324bf39">
-<span class="eqno">(7)<a class="headerlink" href="#equation-57e5ea4f-af22-49f1-a674-3b6ee324bf39" title="Permalink to this equation"></a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-71a8b351-ef61-4575-9bec-eb02d0bb0b92">
+<span class="eqno">(7)<a class="headerlink" href="#equation-71a8b351-ef61-4575-9bec-eb02d0bb0b92" title="Permalink to this equation"></a></span>\[\begin{equation}
     \mathbf{COV} = \frac{1}{anz\_time} \mathbf{U}^T \mathbf{Y}
 \end{equation}\]</div>
 </section>
